@@ -11,7 +11,9 @@ int main() {
 	cout << "dx = "; cin >> dx;
 	cout << "R = "; cin >> R;
 
-	cout << "--------------------" << endl;
+	cout << "--------------------------------" << endl;
+	cout << "|" << setw(8) << "x" << setw(8) << "|" << setw(8) << "y" << setw(8) << "|" << endl;
+	cout << "--------------------------------" << endl;
 	while (x <= endx) {
 		if (x <= 0)
 			y = -0.5 * x;
@@ -21,9 +23,9 @@ int main() {
 			y = sqrt(R * R + (x - R) * (x - R));
 		else
 			y = -x / 6;
-		cout << "|" << setw(5)  << setprecision(2) << x << setw(5) << "|" 
-			<< setw(5) <<  setprecision(2) << y << setw(5) << "|" << endl;
+		cout << "|" << setw(8)  << setprecision(3) << x << setw(8) << "|" 
+			<< setw(8) <<  setprecision(3) << y << setw(8) << "|" << endl;
 		x += dx;
 	}
-	cout << "--------------------" << endl;
+	cout << "--------------------------------" << endl;
 }
